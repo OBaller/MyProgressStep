@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var steps = [StepperData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//        steps = createData()
+        let stepper = StepperView(frame: self.view.frame, steps: steps)
+        try? stepper.configureView(mode:
+                . vertical)
+        self.view.addSubview(stepper)
     }
 
-
+    
 }
 
